@@ -1,0 +1,79 @@
+<div class="contact-detail-container mat-elevation-z2">
+  <mat-card class="profile-card">
+      <div class="profile-header">
+          <img [src]="contact?.profilePhoto || 'https://via.placeholder.com/100'" alt="Profile Photo" class="profile-photo" />
+          <div class="profile-info">
+              <h2>{{ contact?.firstName }} {{ contact?.lastName }}</h2>
+              <p class="role">{{ contact?.role }}</p>
+              <div class="action-buttons">
+                  <button class="action-btn">
+                      <i class="fa-solid fa-message" style="color: #fafcff;"> Message</i>
+                  </button>
+                  <button mat-icon-button>
+                      <i class="fa-solid fa-phone" style="color: #959ca7;"></i>
+                  </button>
+                  <button mat-icon-button>
+                      <i class="fa-solid fa-arrow-up-from-bracket" style="color: #959ca7;"></i>
+                  </button>
+                  <button mat-icon-button>
+                      <i class="fa-solid fa-ellipsis" style="color: #959ca7;"></i>
+                  </button>
+              </div>
+          </div>
+      </div>
+
+      <div class="profile-details">
+          <div class="detail">
+              <div class="custom-label">Bio</div>
+              <span>{{ contact?.bio }}</span>
+          </div>
+          <div class="detail">
+            <div class="custom-label">Email</div>
+              <span>
+                  <ng-container *ngFor="let email of contact?.emailAddresses; let last = last">
+                      {{ email }} <span *ngIf="last" class="tag">Primary</span><br *ngIf="!last" />
+                  </ng-container>
+              </span>
+          </div>
+          <div class="detail">
+            <div class="custom-label">Dial</div>
+              <span>{{ contact?.dial }}</span>
+          </div>
+          <div class="detail">
+            <div class="custom-label">Meeting</div>
+              <span><a [href]="contact?.meeting">{{ contact?.meeting }}</a></span>
+          </div>
+          <div class="detail">
+            <div class="custom-label">Phone</div>
+              <span>
+                  <ng-container *ngFor="let phone of contact?.phoneNumbers; let last = last">
+                      {{ phone }} <span *ngIf="last" class="tag">Primary</span><br *ngIf="!last" />
+                  </ng-container>
+              </span>
+          </div>
+          <div class="social">
+            <div class="custom-label">Social</div>
+              <div class="social-icons">
+                  <a *ngIf="contact?.social?.faceBook" [href]="contact?.social?.faceBook" class="social-icon">
+                      <i class="fa-brands fa-facebook-f" style="color: #959ca7;"></i>
+                  </a>
+                  <a *ngIf="contact?.social?.twitter" [href]="contact?.social?.twitter" class="social-icon">
+                      <i class="fa-brands fa-twitter" style="color: #959ca7;"></i>
+                  </a>
+                  <a *ngIf="contact?.social?.linkedIn" [href]="contact?.social?.linkedIn" class="social-icon">
+                      <i class="fa-brands fa-linkedin-in" style="color: #959ca7;"></i>
+                  </a>
+                  <a *ngIf="contact?.social?.gmail" [href]="contact?.social?.gmail" class="social-icon">
+                      <i class="fa-brands fa-google" style="color: #959ca7;"></i>
+                  </a>
+                  <a *ngIf="contact?.social?.instagram" [href]="contact?.social?.instagram" class="social-icon">
+                      <i class="fa-brands fa-instagram" style="color: #959ca7;"></i>
+                  </a>
+                  <a *ngIf="contact?.social?.webSite" [href]="contact?.social?.webSite" class="social-icon">
+                      <i class="fa-solid fa-globe" style="color: #959ca7;"></i>
+                  </a>
+              </div>
+          </div>
+      </div>
+  </mat-card>
+</div>

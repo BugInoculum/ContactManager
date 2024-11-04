@@ -1,0 +1,9 @@
+<div class="bar">
+  <mat-label class="search-label">Search for a contact</mat-label>
+  <mat-form-field appearance="fill" class="search-field">
+      <input matInput type="text" placeholder="Name, email or phone number" [(ngModel)]="searchTerm" (input)="onSearch()" />
+      <button mat-icon-button matSuffix aria-label="Search" class="search-btn" (click)="onSearch()">
+          <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+  </mat-form-field>
+</div>

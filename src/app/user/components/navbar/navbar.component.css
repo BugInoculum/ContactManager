@@ -1,0 +1,52 @@
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-left: 8px;
+  font-family: Lato;
+  line-height: 32px;
+  color: #1A1C1D;
+
+}
+
+.navbar-spacer {
+  flex: 1;
+}
+
+.menu-btn {
+  margin-right: 8px;
+}
+
+.icon-btn {
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 10px; 
+}
+
+
+.nav-btn {
+
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+
+
+.bordered-toolbar {
+  border: 1px solid #ECEEF5; /* Sets the border color */
+  box-shadow: none; /* Optional: Removes any shadow to keep it clean */
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .navbar-title {
+      font-size: 1.2em;
+  }
+}

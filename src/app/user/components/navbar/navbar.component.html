@@ -1,0 +1,17 @@
+<mat-toolbar color="primary" class="navbar bordered-toolbar">
+  <button mat-icon-button aria-label="Menu" class="menu-btn icon-btn">
+    <i class="fa-solid fa-bars" style="color: #8083A3"></i>
+  </button>
+
+  <span class="navbar-title">Contacts</span>
+
+  <div class="navbar-spacer"></div>
+
+  
+  <button mat-icon-button aria-label="Previous" class="nav-btn" (click)="onPrevious()">
+    <i class="fa-solid fa-angle-up fa-rotate-270" style="color: #8083A3"></i>
+  </button>
+  <button mat-icon-button aria-label="Next" class="nav-btn" (click)="onNext()">
+    <i class="fa-solid fa-angle-up fa-rotate-90" style="color: #8083A3"></i>
+  </button>
+</mat-toolbar>

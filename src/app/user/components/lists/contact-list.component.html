@@ -1,0 +1,35 @@
+<div class="contact-list-container mat-elevation-z2">
+    <!-- Navbar Component -->
+    <app-navbar (previousPage)="goToPreviousPage()" (nextPage)="goToNextPage()"></app-navbar>
+
+    <!-- Search Bar Component -->
+    <app-search-bar (searchTermChanged)="onSearch($event)"></app-search-bar>
+
+    <!-- Contact List -->
+    <div class="contact-list">
+        <div class="contact-item" *ngFor="let contact of paginatedContacts" (click)="goToContactDetails(contact)">
+            <div class="contact-info">
+                <img src="" alt="Profile Picture" class="contact-avatar" />
+                <div>
+                    <h3>{{ contact.firstName }} {{ contact.lastName }}</h3>
+                    <p>{{ contact.role }}</p>
+                </div>
+            </div>
+            <div class="contact-actions">
+                <button mat-icon-button class="action-btn">
+                    <i class="fa-solid fa-message" style="color: #959ca7;"></i>
+                </button>
+                <button mat-icon-button class="action-btn">
+                    <mat-icon>
+                        <i class="fa-solid fa-phone" style="color: #959ca7;"></i>
+                    </mat-icon>
+                </button>
+                <button mat-icon-button class="action-btn">
+                    <mat-icon>
+                        <i class="fa-solid fa-ellipsis" style="color: #959ca7;"></i>
+                    </mat-icon>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

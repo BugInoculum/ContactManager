@@ -1,0 +1,53 @@
+.bar {
+  width: 547.28px;
+  display: flex;
+  flex-direction: column; /* Stack label above input */
+  margin: 16px 0;
+}
+
+.search-label {
+  color: rgba(0, 0, 0, 0.54); /* Light color for the label */
+  font-weight: bold; /* Make the input label bold */
+  margin-bottom: 4px; /* Space between label and input */
+}
+
+.search-field {
+  width: 547.28px;
+  border: none; 
+  background: transparent; 
+}
+
+/* Style for the input field */
+.search-field input {
+  height: 48px; /* Set the desired height */
+  padding: 0 12px; /* Add some horizontal padding */
+  border: none; /* Remove border */
+  font-weight: bold; /* Make the input text bold */
+}
+
+/* Remove outline and border from input */
+.search-field input:focus {
+  outline: none; /* Remove focus outline */
+  box-shadow: none; /* Remove box shadow */
+}
+
+/* Placeholder styling */
+.search-field input::placeholder {
+  color: rgba(1, 7, 10, 0.945); /* Placeholder color */
+  opacity: 1; /* Ensure full opacity for better visibility */
+  font-weight: bold; /* Attempt to make placeholder bold */
+}
+
+/* Style for the search button */
+.search-btn {
+  background-color: transparent; /* No background */
+  border: none; /* No border */
+  color: #959ca7; /* Icon color */
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .search-field {
+      max-width: 100%; /* Full width on smaller screens */
+  }
+}
