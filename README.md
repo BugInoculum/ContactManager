@@ -23,6 +23,7 @@ This is a frontend application for managing contacts, built with Angular. It int
 - Mainly the styling of the pages is incomplete.
 - Images are not handled but they ideally would be handled using public urls from cloud
 - Didn't get the time to add authgaurds and authentication
+- Interfaces need to be separated. As the same contact interface is being used in search, list and details components.
 
 ## Installation
 
